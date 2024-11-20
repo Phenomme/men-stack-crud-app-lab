@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Movie Show Page</title>
+  </head>
+  <body>
+    <a href="/movies/">Back to Movies</a>
+    <h1>Here Is Your Movie</h1>
+    <h1><%= movie.name %></h1>
+    <% if (movie.enjoyedWatching) { %>
+      <p>Enjoyed watching this movie!</p>
+    <% } else { %>
+      <p>0 out 10 would not recommend !</p>
+    <% } %>
+    <form action="/movies/<%=movie._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= movie.name %></button>
+      </form>
+      <a href="/movies/<%= movie._id %>/edit">Edit <%= movie.name %></a>
+      <a href="/movies">Back to Movies</a>
+      
+  </body>
+</html>

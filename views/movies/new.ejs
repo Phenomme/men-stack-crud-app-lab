@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Create a Movie</title>
+  </head>
+  <body>
+    <a href="/movies/">Back to Movies</a>
+
+    <h1>Create a New Movie!</h1>
+    <form action="/movies" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+    
+        <label for="enjoyedWatching">Did you enjoy watching?</label>
+        <input type="checkbox" name="enjoyedWatching" id="enjoyedWatching" />
+    
+        <button type="submit">Add Movie</button>
+      </form>
+  </body>
+</html>
